@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Online chat</title>
+<link rel= "stylesheet" href ="estilos.css" />
+<script src="http://localhost:6969/socket.io/socket.io.js"></script>
+
+<script src="websocket.js"></script>
+</head>
+
+<body>
+<script>
+   function formulario()
+    {
+     window.alert("Se ha enviado el formulario");
+    }
+</script>
+
+<div class="container">
+
+<form id="zform">
+    <label>Message: </label>
+    <input type="text" name="zmessage" id="zmessage" placeholder="Please insert message" required />
+    <input type="submit" />
+</form>
+
+<div class="container">
+	<form action="/upload" enctype="multipart/form-data" method="post">
+    <input type="text" name="nombre" placeholder="Escriba su nombre" required><br>
+    <input type="text" name="asunto" placeholder="Escriba el asunto" required><br>
+    <input type="text" name="mensaje" placeholder="Escriba el mensaje" required><br>
+    <input type="file" name="upload" multiple="multiple"><br>
+    <input type="submit" value="Upload" onclick = "formulario()">
+    </form>
+</div>
+
+
+</div>
+
+<div id="zchat" class="container">
+
+</div>
+
+</body>
+</html>
