@@ -8,7 +8,8 @@ var util = require("util");
 var lib = require('./lib');
 var fs = require("fs");
 
-server.listen(6969);
+var port = Number(process.env.PORT || 3000)
+server.listen(port);
 
 app.get("/", function(req,res){
   app.use(express.static(__dirname + "/public"));
